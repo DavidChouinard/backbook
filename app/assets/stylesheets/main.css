@@ -1,0 +1,167 @@
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  background: #2ecc71;
+  font-family: 'Lato', sans-serif;
+}
+
+#container {
+  max-width: 400px;
+  margin: 50px auto;
+}
+
+.notice {
+  color: green;
+  font-size: 13px;
+  line-height: 18px;
+  margin-bottom: 12px;
+}
+
+.notice > span {
+  font-weight: bold;
+}
+
+.prompt {
+  margin-top: 100px;
+}
+
+.prompt > input {
+  display: block;
+  width: 100%;
+  font-size: 24px;
+  padding: 8px 8px;
+  outline: 0;
+  border: 6px solid #d35400;
+}
+
+.prompt > input:focus {
+  border: 6px solid #e67e22;
+}
+
+.authors {
+  margin-top: 40px;
+}
+
+.author, .author-show {
+  background: #d35400;
+  padding: 10px 18px;
+  border-top: 1px dashed #2ecc71;
+  border-bottom: 1px dashed #2ecc71;
+}
+
+.author:first-child {
+  border-top: 1px solid #d35400;
+}
+
+.author:last-child {
+  border-bottom: 1px solid #d35400;
+}
+
+.author {
+  margin-top: 1px;
+  display: block;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+}
+
+.action-delete {
+  position: absolute;
+  right: 14px;
+  height: 18px;
+  margin-top: 3px;
+  cursor: pointer;
+  opacity: 0.6;
+  display: none;
+}
+
+.author:hover .action-delete,
+.book:hover .action-delete {
+  display: block;
+}
+
+.action-delete:hover {
+  opacity: 1;
+}
+
+.action-delete path {
+  fill: white;
+}
+
+.books {
+  background: #d35400;
+  color: white;
+  padding: 8px 18px;
+}
+
+.author-show {
+  position: relative;
+}
+
+.author-show input {
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+
+  display: block;
+  width: 100%;
+
+  outline: 0;
+  border: 0;
+  background: none;
+
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+}
+
+.book {
+  padding: 4px 0;
+  position: relative;
+}
+
+.author input, .book input {
+  font-size: 15px;
+
+  display: block;
+  width: 100%;
+
+  color: white;
+
+  outline: 0;
+  border: 0;
+  background: none;
+
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+}
+
+.book input {
+  margin-top: 4px;
+}
+
+.author input::-webkit-input-placeholder,
+.book input::-webkit-input-placeholder {
+  color: white;
+  opacity: 0.6;
+}
+.author input::-moz-placeholder,
+.book input::-moz-placeholder {
+  color: white;
+  opacity: 0.6;
+}
+
+/* don't show placeholder on focus */
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus::-moz-placeholder { color:transparent; }

@@ -50,7 +50,7 @@ class AuthorsController < ApplicationController
     end
 
     def get_books
-      @books = @author.books
+      @books = @author.books.order(:title)
       @book = Book.new(author: @author)
     end
 
